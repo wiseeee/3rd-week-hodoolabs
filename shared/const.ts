@@ -1,3 +1,3 @@
-export interface BoxProps {
+export interface Props {
   name: string;
 }

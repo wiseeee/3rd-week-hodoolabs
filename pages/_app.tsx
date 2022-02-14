@@ -1,3 +1,5 @@
+import Footer from "components/Footer";
+import Header from "components/Header";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
@@ -9,11 +11,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>boilerplate</title>
+        <title>호두랩스 | 땅콩스쿨</title>
       </Head>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <Header />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     </>
   );
