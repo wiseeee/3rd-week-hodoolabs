@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-text-size-adjust: none;
         font-family: -apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo,sans-serif;       
         font-display: fallback;
-        ${media.tablet}{
+        ${media.mobile}{
             font-size: 10px;
         }
         -ms-overflow-style: none;
@@ -37,12 +37,6 @@ export const GlobalStyle = createGlobalStyle`
         display: block;
         ${media.mobile} {
             display: none;
-        }
-    }
-    .tablet-mobile-only{
-        display: none;
-        ${media.tablet}{
-            display:block;
         }
     }
     .mobile-only {
