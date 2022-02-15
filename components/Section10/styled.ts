@@ -3,9 +3,14 @@ import { media, theme } from "styles/theme";
 
 export const Section = styled.section`
   background-color: #f9f9f9;
+`;
+export const SectionWrap = styled.div`
   max-width: 1140px;
   margin: 0 auto;
   padding: 150px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 export const SectionTop = styled.div`
   font-weight: bold;
@@ -17,13 +22,15 @@ export const SectionTop = styled.div`
 export const CouponWrap = styled.div`
   display: flex;
   position: relative;
-  width: 1240px;
+  width: 1200px;
   height: 534px;
+  overflow: hidden;
   > img {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 1;
+    backface-visibility: hidden;
   }
   > div {
     z-index: 2;
@@ -96,25 +103,26 @@ export const CouponLeft = styled.div`
 `;
 export const CouponRight = styled.div`
   box-sizing: border-box;
-  padding-left: 220px;
+  padding-left: 44px;
   padding-top: 182px;
   display: flex;
+  flex: 1 1 0%;
   flex-direction: column;
   align-items: center;
   @media (max-width: 1200px) {
-    padding-left: 140px;
+    padding-left: 0px;
     padding-top: 182px;
   }
   @media (max-width: 1088px) {
-    padding-left: 92px;
+    padding-left:0px;
     padding-top: 182px;
   }
   @media (max-width: 994px) {
-    padding-left: 103px;
+    padding-left: 0px;
     padding-top: 200px;
   }
   @media (max-width: 900px) {
-    padding-left: 80px;
+    padding-left: 0px;
     padding-top: 198px;
   }
   @media (max-width: 768px) {
