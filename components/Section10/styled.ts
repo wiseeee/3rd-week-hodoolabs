@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import { media, theme } from "styles/theme";
 
 export const Section = styled.section`
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   max-width: 1140px;
   margin: 0 auto;
   padding: 150px 20px;
@@ -19,7 +19,7 @@ export const CouponWrap = styled.div`
   position: relative;
   width: 1240px;
   height: 534px;
-  /* background-color: ${theme.color.orange}; */
+  background-color: ${({ theme }) => theme.color.orange};
   > img {
     position: absolute;
     width: 100%;
@@ -144,11 +144,11 @@ export const CouponSub = styled.div`
   text-align: center;
   padding-top: 30px;
   br {
-      display: none;
-    }
+    display: none;
+  }
   @media (max-width: 994px) {
     br {
-      display: block!important;
+      display: block !important;
     }
   }
   ${media.mobile} {
@@ -162,14 +162,14 @@ export const DownloadCaption = styled.div`
   text-align: center;
   font-size: 14px;
   line-height: 24px;
-  color: #F9F9F9;
+  color: #f9f9f9;
   padding: 10px 15px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 50px;
   margin-bottom: 17px;
-  position:relative;
+  position: relative;
   :after {
-    content:'';
+    content: "";
     display: block;
     position: absolute;
     bottom: -10px;
@@ -192,9 +192,9 @@ export const ButtonBlack = styled.button`
   font-weight: bold;
   font-size: 20px;
   line-height: 32px;
-  color: #F9F9F9;
+  color: #f9f9f9;
   padding: 19px 40px;
-  background:  #333333;;
+  background: #333333;
   border-radius: 50px;
   ${media.mobile} {
     font-size: 14px;
