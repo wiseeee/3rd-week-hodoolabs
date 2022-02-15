@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     html{
         font-size: 24px;
         -webkit-text-size-adjust: none;
-        font-family: -apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo,sans-serif,'Noto Sans KR', sans-serif;;       
+        font-family: 'Noto Sans KR', -apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo,sans-serif, sans-serif;      
         font-display: fallback;
         ${media.mobile}{
             font-size: 10px;
