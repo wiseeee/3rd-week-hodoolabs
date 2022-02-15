@@ -1,9 +1,21 @@
-import { useRef, useEffect, useCallback } from "react";
+import { useRef, useEffect, useCallback, MutableRefObject } from "react";
 
-const useScrollFadeIn = (direction = "up", duration = 1, delay = 0) => {
-  const dom = useRef();
+interface ScrollFadeIn {
+  ref?: MutableRefObject<HTMLDivElement | null>;
+  style: {
+    opacity: number;
+    transform: string;
+  };
+}
 
-  const handleDirection = (name) => {
+const useScrollFadeIn = (
+  direction = "up",
+  duration = 1,
+  delay = 0
+): ScrollFadeIn => {
+  const dom = useRef<HTMLDivElement>(null);
+
+  const handleDirection = (name: string) => {
     switch (name) {
       case "up":
         return "translate3d(0, 50%, 0)";
@@ -30,7 +42,7 @@ const useScrollFadeIn = (direction = "up", duration = 1, delay = 0) => {
         style.transitionDuration = `${duration}s`;
         style.transitionTimingFunction = "cubic-bezier(0, 0, 0.2, 1)";
         style.transitionDelay = `${delay}s`;
-        style.opacity = 1;
+        style.opacity = "1";
         style.transform = "translate3d(0, 0, 0)";
       }
     },
@@ -42,7 +54,7 @@ const useScrollFadeIn = (direction = "up", duration = 1, delay = 0) => {
     const { current } = dom;
 
     if (current) {
-      observer = new IntersectionObserver(handleScroll, { threshold: 0.7 });
+      observer = new IntersectionObserver(handleScroll, { threshold: 0.5 });
       observer.observe(current);
     }
 

@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 
-export const useScroll = () => {
+interface Scroll {
+  x: number;
+  y: number;
+}
+
+export const useScroll = (): Scroll => {
   const [state, setState] = useState({
     x: 0,
     y: 0,

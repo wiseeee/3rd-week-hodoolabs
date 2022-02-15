@@ -8,11 +8,10 @@ import Section07 from "components/Section07";
 import Section08 from "components/Section08";
 import Section09 from "components/Section09";
 import Section10 from "components/Section10";
-import * as S from "styles/styled";
 
 const Index: React.FC = () => {
   return (
-    <S.MainWrapper>
+    <>
       <Section01 />
       <Section02 />
       <Section03 />
@@ -23,7 +22,7 @@ const Index: React.FC = () => {
       <Section08 />
       <Section09 />
       <Section10 />
-    </S.MainWrapper>
+    </>
   );
 };
 
