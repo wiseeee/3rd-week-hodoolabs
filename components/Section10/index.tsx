@@ -1,54 +1,41 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {useState, useEffect} from 'react';
 import * as S from './styled';
-
-interface Size {
-  width: number;
+interface Url {
+  url: string;
 }
 const Section10: React.FC = () => {
-  const [size, setSize] = useState<Size>();
+  const [url, setUrl] = useState<Url>()
+  
   const resizeHandler = () => {
     const width = window.innerWidth;
-    setSize({
-      width: width,
-    });
+    let url;
     if(width > 1200) {
-      document.querySelector('.imgUrl').setAttribute ('src', '/images/coupon1200.png')
+      url = 'coupon1200'
     } else if (width > 1088) {
-      document.querySelector('.imgUrl').setAttribute ('src', '/images/coupon1088.png')
+      url = `coupon1088`
     } else if (width > 994) {
-      document.querySelector('.imgUrl').setAttribute ('src', '/images/coupon994.png')
+      url = `coupon994`
     } else if (width > 900) {
-      document.querySelector('.imgUrl').setAttribute ('src', '/images/coupon900.png')
+      url = `coupon900`
     } else if (width > 768) {
-      document.querySelector('.imgUrl').setAttribute ('src', '/images/coupon768.png')
+      url = `coupon768`
     } else if (width <= 767.9) {
-      document.querySelector('.imgUrl').setAttribute ('src', '/images/coupon_mobile.png')
+      url = `coupon_mobile`
     }
+    setUrl(url);
   };
 
   useEffect(() => {
     window.onresize = resizeHandler;
-    const width = window.innerWidth;
-    if(width > 1200) {
-      document.querySelector('.imgUrl').setAttribute ('src', '/images/coupon1200.png')
-    } else if (width > 1088) {
-      document.querySelector('.imgUrl').setAttribute ('src', '/images/coupon1088.png')
-    } else if (width > 994) {
-      document.querySelector('.imgUrl').setAttribute ('src', '/images/coupon994.png')
-    } else if (width > 900) {
-      document.querySelector('.imgUrl').setAttribute ('src', '/images/coupon900.png')
-    } else if (width > 768) {
-      document.querySelector('.imgUrl').setAttribute ('src', '/images/coupon768.png')
-    } else if (width <= 767.9) {
-      document.querySelector('.imgUrl').setAttribute ('src', '/images/coupon_mobile.png')
-    }
+    resizeHandler();
   }, []);
 
   return (
     <S.Section>
       <S.SectionTop>지금 다운로드 받으세요!</S.SectionTop>
       <S.CouponWrap>
-        <img alt="쿠폰이미지" className='imgUrl'/>
+        <img alt="쿠폰이미지" src={`/images/${url}.png`}/>
         <S.CouponLeft>
           <img src="/images/logo_text_white.png" alt="땅콩스쿨 로고" />
           <S.CouponTitle>책을 보는<br />새로운 방법</S.CouponTitle>
