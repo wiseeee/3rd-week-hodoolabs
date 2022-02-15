@@ -11,7 +11,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>호두랩스 | 땅콩스쿨</title>
+        <title>Sixted | 땅콩스쿨</title>
+        <link
+          rel="shortcut icon"
+          href="https://ddangkongschool.com/favicon.ico"
+        />
       </Head>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
