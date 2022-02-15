@@ -8,11 +8,9 @@ const Section02: React.FC = () => {
 
   return (
     <S.Section>
-      <img
-        src="/images/section02_animation.gif"
-        alt="peanut-logo"
-        {...firstAnimated}
-      />
+      <div {...firstAnimated}>
+        <img src="/images/section02_animation.gif" alt="peanut-logo" />
+      </div>
       <h1 {...secondAnimated}>땅콩스쿨이란?</h1>
       <S.SpanWrapper {...thirdAnimated}>
         <span>실시간(LIVE)으로, 아이들이 좋아하는 캐릭터 선생님을 통해,</span>

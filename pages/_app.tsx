@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import Footer from "components/Footer";
 import Header from "components/Header";
 import type { AppProps } from "next/app";

@@ -1,7 +1,7 @@
 import { useRef, useEffect, useCallback, MutableRefObject } from "react";
 
 interface ScrollFadeIn {
-  ref?: MutableRefObject<HTMLDivElement | null>;
+  ref?: MutableRefObject<HTMLDivElement>;
   style: {
     opacity: number;
     transform: string;
