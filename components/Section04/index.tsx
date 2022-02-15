@@ -30,30 +30,21 @@ const Section04: React.FC = () => {
         </S.TextWrapper>
         <S.ImagesWrapper>
           <div>
-            <img
-              {...thirdAnimated}
-              className="check"
-              src={CHECK_GIF}
-              alt="check-gif"
-            />
+            <div {...thirdAnimated}>
+              <img className="check" src={CHECK_GIF} alt="check-gif" />
+            </div>
             <img className="book" src={BOOK.FIRST} alt="first-book" />
           </div>
           <div>
-            <img
-              {...fourthAnimated}
-              className="check"
-              src={CHECK_GIF}
-              alt="check-gif"
-            />
+            <div {...fourthAnimated}>
+              <img className="check" src={CHECK_GIF} alt="check-gif" />
+            </div>
             <img className="book" src={BOOK.SECOND} alt="first-book" />
           </div>
           <div>
-            <img
-              {...fifthAnimated}
-              className="check"
-              src={CHECK_GIF}
-              alt="check-gif"
-            />
+            <div {...fifthAnimated}>
+              <img className="check" src={CHECK_GIF} alt="check-gif" />
+            </div>
             <img className="book" src={BOOK.THIRD} alt="first-book" />
           </div>
         </S.ImagesWrapper>
