@@ -19,7 +19,6 @@ export const CouponWrap = styled.div`
   position: relative;
   width: 1240px;
   height: 534px;
-  background-color: ${({ theme }) => theme.color.orange};
   > img {
     position: absolute;
     width: 100%;
@@ -187,7 +186,8 @@ export const DownloadCaption = styled.div`
   }
 `;
 export const ButtonBlack = styled.button`
-  display: block;
+  display: flex;
+  align-items: center;
   text-align: center;
   font-weight: bold;
   font-size: 20px;
@@ -200,5 +200,9 @@ export const ButtonBlack = styled.button`
     font-size: 14px;
     border-radius: 10px;
     padding: 10px 50px;
+  }
+  > img {
+    width: 20px;
+    padding-right: 17px;
   }
 `;
