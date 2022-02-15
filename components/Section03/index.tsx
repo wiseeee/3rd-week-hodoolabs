@@ -6,7 +6,7 @@ const TABLET_MOCKUP =
 const VIDEO =
   "https://ddks-front-dev.s3.ap-northeast-1.amazonaws.com/media/main_video.ccd1f367.mp4";
 
-const Section04: React.FC = () => {
+const Section03: React.FC = () => {
   const firstAnimated = useScrollFadeIn("up", 1, 0);
   const secondAnimated = useScrollFadeIn("up", 1, 0.1);
 
@@ -30,4 +30,4 @@ const Section04: React.FC = () => {
   );
 };
 
-export default Section04;
+export default Section03;

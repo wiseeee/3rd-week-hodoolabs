@@ -1,14 +1,10 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  height: 938px;
+  height: 650px;
   width: 100%;
   overflow-x: hidden;
-  background-image: url("https://ddangkongschool.com/447b61faa9f2c83c464b4effe7cde86e.png");
-  background-size: cover;
-  background-color: rgb(255, 255, 255);
-  background-position: center center;
-  background-repeat: no-repeat no-repeat;
+  background-color: ${({ theme }) => theme.color.bgGray};
   display: flex;
   justify-content: center;
 `;
@@ -16,14 +12,18 @@ export const Section = styled.section`
 export const Wrapper = styled.div`
   width: 100%;
   max-width: 1200px;
-  padding-left: 30px;
-  padding-right: 30px;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  align-self: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 150px;
+  margin-bottom: 150px;
 `;
 
 export const TextWrapper = styled.div`
-  width: 290px;
+  width: 354px;
 
   h1 {
     font-size: 50px;
@@ -42,21 +42,28 @@ export const TextWrapper = styled.div`
   }
 `;
 
-export const TabletVideo = styled.div`
-  width: 1118px;
-  height: 880px;
-  position: relative;
+export const ImagesWrapper = styled.div`
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 160px;
+  margin-top: 0px;
+  gap: 50px;
 
-  img {
-    width: 100%;
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  video {
-    position: absolute;
-    top: 95px;
-    left: 106px;
-    width: 740px;
-    height: 557px;
-    border-radius: 20px;
+  .check {
+    width: 150px;
+    height: 100px;
+  }
+
+  .book {
+    margin-top: 15px;
+    width: 150px;
+    height: 200px;
   }
 `;
