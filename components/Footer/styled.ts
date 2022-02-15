@@ -6,13 +6,14 @@ export const FooterWrap = styled.footer`
   justify-content: space-between;
   max-width: 1140px;
   margin: 0 auto;
+  padding: 60px 0;
   ${media.pc} {
     flex-direction: column;
-    padding: 0 30px;
+    padding: 60px 30px;
   }
   ${media.mobile} {
     flex-direction: column;
-    padding: 0 30px;
+    padding: 60px 30px;
   }
 `;
 export const FooterLeft = styled.div`
