@@ -1,5 +1,7 @@
+import * as S from "./styled";
+
 const Section05: React.FC = () => {
-  return <div>Section05</div>;
+  return <S.Section>Section05</S.Section>;
 };
 
 export default Section05;
