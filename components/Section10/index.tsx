@@ -1,11 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {useState, useEffect} from 'react';
+import useScrollFadeIn from "hooks/useScrollFadeIn";
 import * as S from './styled';
 interface Url {
   url: string;
 }
 const Section10: React.FC = () => {
   const [url, setUrl] = useState<Url>()
+  const firstAnimated = useScrollFadeIn("up", 1, 0);
   
   const resizeHandler = () => {
     const width = window.innerWidth;
@@ -33,7 +35,7 @@ const Section10: React.FC = () => {
 
   return (
     <S.Section>
-      <S.SectionTop>지금 다운로드 받으세요!</S.SectionTop>
+      <S.SectionTop {...firstAnimated}>지금 다운로드 받으세요!</S.SectionTop>
       <S.CouponWrap>
         <img alt="쿠폰이미지" src={`/images/${url}.png`}/>
         <S.CouponLeft>
