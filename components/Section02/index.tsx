@@ -1,9 +1,6 @@
 import * as S from "./styled";
 import useScrollFadeIn from "hooks/useScrollFadeIn";
 
-const PEANUT_LOGO =
-  "https://ddangkongschool.com/0d6883c9f82f956984f5ce1f126c1b0d.png";
-
 const Section02: React.FC = () => {
   const firstAnimated = useScrollFadeIn("up", 1, 0);
   const secondAnimated = useScrollFadeIn("up", 1, 0.1);
@@ -11,7 +8,11 @@ const Section02: React.FC = () => {
 
   return (
     <S.Section>
-      <img src={PEANUT_LOGO} alt="peanut-logo" {...firstAnimated} />
+      <img
+        src="/images/section02_animation.gif"
+        alt="peanut-logo"
+        {...firstAnimated}
+      />
       <h1 {...secondAnimated}>땅콩스쿨이란?</h1>
       <S.SpanWrapper {...thirdAnimated}>
         <span>실시간(LIVE)으로, 아이들이 좋아하는 캐릭터 선생님을 통해,</span>
