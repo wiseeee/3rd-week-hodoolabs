@@ -1,6 +1,9 @@
 import * as S from "./styled";
 import useScrollFadeIn from "hooks/useScrollFadeIn";
 
+const MOUSE_IMAGE =
+  "https://ddangkongschool.com/82fb322af4738d0bcf0dcf87834209a5.png";
+
 const Section01: React.FC = () => {
   const firstAnimated = useScrollFadeIn("up", 1, 0);
   const secondAnimated = useScrollFadeIn("up", 1, 0.1);
@@ -19,10 +22,7 @@ const Section01: React.FC = () => {
         <S.Span {...thirdAnimated}>만들어줄게요!</S.Span>
       </S.TextWrapper>
       <S.MouseAnimation>
-        <img
-          src="https://ddangkongschool.com/82fb322af4738d0bcf0dcf87834209a5.png"
-          alt="move-mouse"
-        />
+        <img src={MOUSE_IMAGE} alt="move-mouse" />
       </S.MouseAnimation>
     </S.Section>
   );
