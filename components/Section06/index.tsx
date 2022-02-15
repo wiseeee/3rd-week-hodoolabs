@@ -1,5 +1,5 @@
-import { Props } from "shared/const";
-
-const Section06 = ({ name }: Props) => <div>{name}</div>;
+const Section06: React.FC = () => {
+  return <div>Section06</div>;
+};
 
 export default Section06;

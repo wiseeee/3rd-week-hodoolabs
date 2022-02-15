@@ -6,7 +6,7 @@ const BLACK_LOGO_URL =
 const WHITE_LOGO_URL =
   "https://ddangkongschool.com/99fc850a76600cb2d4c58074a018c441.png";
 
-const Header = () => {
+const Header: React.FC = () => {
   const { y } = useScroll();
 
   return (
