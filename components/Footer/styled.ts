@@ -15,7 +15,7 @@ export const FooterWrap = styled.footer`
     padding: 0 30px;
   }
 `;
-export const FooterLeft = styled.footer`
+export const FooterLeft = styled.div`
   > div {
     display: flex;
     justify-content: flex-start;
@@ -37,15 +37,15 @@ export const FooterLeft = styled.footer`
     font-size: 14px;
   }
 `;
-export const FooterLogo = styled.footer`
+export const FooterLogo = styled.div`
   font-weight: bold;
   font-size: 16px;
   line-height: 28px;
   padding-bottom: 20px;
 `;
-export const FooterRight = styled.footer`
+export const FooterRight = styled.div`
 `;
-export const RightBoxWrap = styled.footer`
+export const RightBoxWrap = styled.div`
   font-size: 16px;
   line-height: 28px;
   > div {
@@ -55,11 +55,11 @@ export const RightBoxWrap = styled.footer`
     font-weight: 700;
   }
 `;
-export const MediaWrap = styled.footer`
+export const MediaWrap = styled.div`
   display: flex;
   margin-top: 30.5px;
 `;
-export const MediaCircle = styled.footer`
+export const MediaCircle = styled.div`
   border-radius: 50%;
   border: 1.5px solid #EEEEEE;
   width: 42.9px;

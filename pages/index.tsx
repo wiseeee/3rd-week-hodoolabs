@@ -1,5 +1,11 @@
+import Section10 from "components/Section10";
+
 const Index = () => {
-  return <div>index</div>;
+  return (
+    <>
+      <Section10 />
+    </>
+  )
 };
 
 
