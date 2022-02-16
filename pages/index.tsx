@@ -20,7 +20,7 @@ const Index: React.FC = () => {
       <Section06 />
       <Section07 />
       <Section08 />
-      <Section09 />
+      <Section09 data={[]} />
       <Section10 />
     </>
   );
