@@ -25,6 +25,8 @@ export const FooterLeft = styled.div`
   > div > a{
     text-decoration: underline;
     padding-left: 5px;
+    font-size: 14px;
+    line-height: 24px;
   }
   span {
     display: block;
