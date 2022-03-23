@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { useMemo, useRef, useState } from 'react';
+import { useMemo, useState} from 'react';
 import Slider, { Settings } from 'react-slick';
-import useInterval from 'hooks/useHook';
 import sliderData from 'public/images/sliderData.json'
 import * as S from "../styled";
 
@@ -21,11 +20,11 @@ interface sliderProps {
 }
 
 function Slick({
-  className,
   autoplay = false,
   speed = 500,
   loop = true,
 }: sliderProps) {
+  const [currentSlide, setCurrentSlide] = useState(0);
   const settings = useMemo<Settings>(
     () => ({
       dots: false,
@@ -34,28 +33,42 @@ function Slick({
       slidesToShow: 1,
       autoplay: Boolean(autoplay),
       autoplaySpeed: typeof autoplay === 'boolean' ? 3000 : autoplay,
+      beforeChange: (slide, newSlide) => setCurrentSlide(newSlide)
     }),
     [autoplay, loop, speed],
   );
+
+  console.log(currentSlide)
+  
+
   return (
-    <><S.SlideWrapper className={className}>
-      <Slider {...settings}>
-        {sliderData.data.map((item, index) => (
-          <S.SliderItem key={index}>
-            <S.ImgWrap>
-              <img src={item.url} id={item.id} />
-            </S.ImgWrap>
-            <S.SilderId>
-              {item.user}
-            </S.SilderId>
-            <S.SliderContent>
-              {item.content}
-            </S.SliderContent>
-          </S.SliderItem>
-        ))}
-      </Slider>
-    </S.SlideWrapper>
-      </>
+    <>
+      <S.SlideWrapper>
+        <S.SlideTopWrap>
+          <S.RotatePath index={currentSlide}>
+            <img src= "/images/section09_path.png" />
+          </S.RotatePath>
+          <S.ChangeImg>
+          <img src= {sliderData.data[currentSlide].url}  />
+          </S.ChangeImg>
+        </S.SlideTopWrap>
+        <Slider {...settings}>
+          {sliderData.data.map((item, index) => (
+            <S.SliderItem key={index} id={item.id}>
+              <S.SliderId>
+                {item.user}
+              </S.SliderId>
+              <S.SliderContent>
+                {item.content}
+              </S.SliderContent>
+            </S.SliderItem>
+          ))}
+        </Slider>
+        <S.SliderProgressBar index={currentSlide + 1}>
+
+        </S.SliderProgressBar>
+      </S.SlideWrapper>
+    </>
   );
 }
 

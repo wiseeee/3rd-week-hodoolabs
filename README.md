@@ -1,5 +1,3 @@
-![enter image description here](https://user-images.githubusercontent.com/24728385/154171584-6bae29e5-591f-45ef-a36f-87579ea71149.png)
-
 <h1 align="middle">땅콩스쿨 클론</h1>
 
 땅콩스쿨 클론코딩 [🔗](https://ddangkongschool.com/)
@@ -8,7 +6,6 @@
 # 🔗 배포
 
 https://relaxed-dubinsky-c161e9.netlify.app
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4cdb7c60-5f99-420f-9f10-5420389e3332/deploy-status)](https://app.netlify.com/sites/relaxed-dubinsky-c161e9/deploys)
 
 
@@ -27,6 +24,7 @@ https://relaxed-dubinsky-c161e9.netlify.app
 <br/>
 
 # 🏹 과제 구현 목록 및 담당
+![enter image description here](https://user-images.githubusercontent.com/24728385/154171584-6bae29e5-591f-45ef-a36f-87579ea71149.png)
   - React, Next.js를 이용한 클론코딩
   - slick 라이브러리 사용
 

@@ -12,9 +12,10 @@ export const BackgroundFilter = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
   padding: 100px 0 50px 0;
 `;
-export const SlideTopWrap = styled.ul`
+export const SlideTopWrap = styled.div`
   display: flex;
   position: relative;
+  height: 150px;
   > li {
     position: absolute;
     top: 0;
@@ -30,6 +31,33 @@ export const SlideTopWrap = styled.ul`
     }
   }
 `;
+export const RotatePath = styled.div<{ index: number }>`
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 122px;
+  height: 122px;
+  transform-origin: right center ;
+  transform: translateX(-50%);
+  z-index: 4;
+  transition: all 1s ease 0s;
+  transform: ${(props) => `rotate(${(props.index) * 45}deg)`};
+  margin: -19px 0px 0px -130px;
+  padding: 11px 0px 0px 8px;
+  > img {
+    width: 171px;
+  }
+`;
+export const ChangeImg = styled.div`
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  > img {
+    width: 115px;
+  }
+`;
+
 export const SliderItem = styled.div`
   width: 100%;
   img{
@@ -119,13 +147,13 @@ export const SlideWrapper = styled.div`
     position: relative;
   }
 `;
-export const SilderId = styled.div`
+export const SliderId = styled.div`
   color: #fff;
   font-size: 17px;
   line-height: 1.8;
   opacity: 0.7;
   text-align: center;
-  padding-bottom: 50px;
+  padding: 50px 0;
 `;
 export const SliderContent = styled.div`
   white-space: pre-wrap;
@@ -138,10 +166,12 @@ export const SliderContent = styled.div`
     font-size: 14px;
   }
 `;
-export const ImgWrap = styled.div`
-  margin: 0 auto;
-  opacity: 0;
-`;
-export const SlideImgWrap = styled.div`
-
+export const SliderProgressBar = styled.div<{ index: number }>`
+  transition: all 1s ease 0s;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 10px;
+  background-color: rgb(255, 177, 0);
+  width: ${(props) => `${props.index * 20}%`};
 `;
