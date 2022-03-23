@@ -39,7 +39,7 @@ export const RotatePath = styled.div<{ index: number }>`
   height: 122px;
   transform-origin: right center ;
   transform: translateX(-50%);
-  z-index: 4;
+  z-index: 3;
   transition: all 1s ease 0s;
   transform: ${(props) => `rotate(${(props.index) * 45}deg)`};
   margin: -19px 0px 0px -130px;
@@ -47,14 +47,28 @@ export const RotatePath = styled.div<{ index: number }>`
   > img {
     width: 171px;
   }
+  ${media.mobile} {
+    width: 90px;
+    height: 90px;
+    margin: -20px 0px 0px -117px;
+    padding: 14px;
+    > img {
+      width: 142px;
+    }
+  }
 `;
 export const ChangeImg = styled.div`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 5;
+  z-index: 4;
   > img {
     width: 115px;
+  }
+  ${media.mobile} {
+    > img {
+      width: 96px;
+    }
   }
 `;
 

@@ -5,9 +5,8 @@
 
 # 🔗 배포
 
-https://relaxed-dubinsky-c161e9.netlify.app
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4cdb7c60-5f99-420f-9f10-5420389e3332/deploy-status)](https://app.netlify.com/sites/relaxed-dubinsky-c161e9/deploys)
-
+https://sixted-wiseee-hodoolabs.netlify.app/
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6e98413a-b513-45f8-90d2-a5162497b632/deploy-status)](https://app.netlify.com/sites/sixted-wiseee-hodoolabs/deploys)
 
 <br/>
 
